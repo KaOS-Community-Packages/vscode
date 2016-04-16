@@ -1,7 +1,7 @@
 pkgname=vscode
-pkgver=0.10.11
+pkgver=1.0.0
 pkgrel=1
-_commit=f291f4ad600767626b24a4b15816b04bee9a3049
+_commit=fa6d0f03813dfb9df4589c30121e9fcffa8a8ec8
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
 url='https://code.visualstudio.com/'
@@ -9,7 +9,7 @@ license=('MIT')
 depends=('gtk2' 'gconf')
 install=${pkgname}.install
 source=("https://az764295.vo.msecnd.net/stable/${_commit}/VSCode-linux-x64-stable.zip" )
-md5sums=('f2ef5738542d1c800b577fd38020424b')
+md5sums=('fb506db2edc24291b7ea25e3bc93e974')
 
 package() {
     install -dm755 ${pkgdir}/usr/share/applications
