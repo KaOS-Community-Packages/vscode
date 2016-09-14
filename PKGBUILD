@@ -1,15 +1,15 @@
 pkgname=vscode
-pkgver=1.5.1
+pkgver=1.5.2
 pkgrel=1
-_commit=07d663dc1bd848161edf4cd4ce30cce410d3d877
-_build=1473370243
+_commit=66f37fd2a99eb9d628dd374d81d78835b410c39b
+_build=1473686317
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
 url='https://code.visualstudio.com/'
 license=('MIT')
 depends=('gtk2' 'alsa-lib' 'libnotify' 'nss' 'nodejs' 'gconf' 'libxtst')
 source=("https://az764295.vo.msecnd.net/stable/${_commit}/code-stable-code_${pkgver}-${_build}_amd64.tar.gz" )
-md5sums=('cf4cc29ef7e70b5fc7e226b08b039a37')
+md5sums=('356d72187479ad3c5020b35247b37463')
 
 package() {
     install -dm755 ${pkgdir}/usr/share/applications
