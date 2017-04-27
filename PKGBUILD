@@ -1,8 +1,8 @@
 pkgname=vscode
-pkgver=1.11.1
+pkgver=1.11.2
 pkgrel=1
-_commit=d9484d12b38879b7f4cdd1150efeb2fd2c1fbf39
-_build=1491486998
+_commit=6eaebe3b9c70406d67c97779468c324a7a95db0e
+_build=1492070517
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
 url="https://code.visualstudio.com/"
@@ -11,7 +11,7 @@ depends=('gtk2' 'alsa-lib' 'libnotify' 'nss' 'nodejs' 'gconf' 'libxtst')
 source=("https://az764295.vo.msecnd.net/stable/${_commit}/code-stable-code_${pkgver}-${_build}_amd64.tar.gz"
         "${pkgname}.desktop"
         "code.svg")
-md5sums=('9bbb463fc3e6cd6bb8e329a7315f3c00'
+md5sums=('908e5320feba6aa0cc0507da2b962f15'
          '20439bbbd1cb5fa5c8d9cb24a05f3b08'
          'ef58bc6b221e3e2dbf7f38376a381260')
 
