@@ -1,33 +1,26 @@
 pkgname=vscode
-pkgver=1.17.0
+pkgver=1.17.1
 pkgrel=1
-_commit=be377c0faf7574a59f84940f593a6849f12e4de7
-_build=1507160143
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
 url="https://code.visualstudio.com/"
 license=('MIT')
 depends=('gtk2' 'alsa-lib' 'libnotify' 'nss' 'gconf' 'libxtst')
-source=("https://az764295.vo.msecnd.net/stable/${_commit}/code-stable-code_${pkgver}-${_build}_amd64.tar.gz"
-        "${pkgname}.desktop"
-        "code.svg")
-md5sums=('a2d1287b0018c93264bd02e1af58f96e'
-         '20439bbbd1cb5fa5c8d9cb24a05f3b08'
-         'ef58bc6b221e3e2dbf7f38376a381260')
+source=(vscode_${pkgver}_x86_64.tar.gz::https://vscode-update.azurewebsites.net/${pkgver}/linux-x64/stable
+        "${pkgname}.desktop")
+md5sums=('0d6ebc99b948ae9a958b65a34c6e724e'
+         '20439bbbd1cb5fa5c8d9cb24a05f3b08')
 
 package() {
     install -dm755 ${pkgdir}/usr/share/applications \
                    ${pkgdir}/opt/vscode \
-                   ${pkgdir}/usr/share/icons/hicolor/scalable/apps \
+                   ${pkgdir}/usr/share/icons \
                    ${pkgdir}/usr/share/licenses/${pkgname}
 
     cp -r ${srcdir}/VSCode-linux-x64/* ${pkgdir}/opt/vscode
-    install -Dm644 ${pkgdir}/opt/vscode/resources/app/{LICENSE*,licenses/LICENSE*} \
-            ${pkgdir}/usr/share/licenses/${pkgname}/
-    install -Dm644 ${srcdir}/${pkgname}.desktop \
-            ${pkgdir}/usr/share/applications/${pkgname}.desktop
-    install -Dm644 ${srcdir}/code.svg \
-            ${pkgdir}/usr/share/icons/hicolor/scalable/apps/code.svg
+    install -Dm644 ${pkgdir}/opt/vscode/resources/app/{LICENSE*,licenses/LICENSE*} ${pkgdir}/usr/share/licenses/${pkgname}/
+    install -Dm644 ${srcdir}/${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+    install -m644 "${srcdir}/VSCode-linux-x64/resources/app/resources/linux/code.png" "${pkgdir}/usr/share/icons/code.png"
     install -dm755 ${pkgdir}/usr/bin
     ln -s /opt/vscode/bin/code ${pkgdir}/usr/bin/${pkgname}
 
