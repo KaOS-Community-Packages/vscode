@@ -1,5 +1,5 @@
 pkgname=vscode
-pkgver=1.19.1
+pkgver=1.19.2
 pkgrel=1
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
@@ -8,7 +8,7 @@ license=('MIT')
 depends=('gtk2' 'alsa-lib' 'libnotify' 'nss' 'gconf' 'libxtst')
 source=(vscode_${pkgver}_x86_64.tar.gz::https://vscode-update.azurewebsites.net/${pkgver}/linux-x64/stable
         "${pkgname}.desktop")
-md5sums=('2e41062687f67483af227fd0c1663e72'
+md5sums=('b4540eba67f70ab7496835b7b69bcea2'
          '20439bbbd1cb5fa5c8d9cb24a05f3b08')
 
 package() {
