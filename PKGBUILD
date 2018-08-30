@@ -23,6 +23,7 @@ package() {
     install -m644 "${srcdir}/VSCode-linux-x64/resources/app/resources/linux/code.png" "${pkgdir}/usr/share/icons/code.png"
     install -dm755 ${pkgdir}/usr/bin
     ln -s /opt/vscode/bin/code ${pkgdir}/usr/bin/${pkgname}
+    ln -s /opt/vscode/bin/code ${pkgdir}/usr/bin/code
 
     rm -rf ${pkgdir}/opt/vscode/resources/app/{LICENSE*,licenses,resources}
 }
