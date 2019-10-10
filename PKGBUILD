@@ -5,7 +5,7 @@ pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
 url="https://code.visualstudio.com/"
 license=('MIT')
-depends=('gtk3' 'alsa-lib' 'libnotify' 'nss' 'gconf' 'libxtst' 'libxss' 'cairo' 'fontconfig' 'gcc-libs'
+depends=('gtk3' 'alsa-lib' 'libnotify' 'nss' 'libxtst' 'libxss' 'cairo' 'fontconfig' 'gcc-libs'
          'libnotify' 'glibc')
 optdepends=('libdbusmenu-glib')
 source=(vscode_${pkgver}_x86_64.tar.gz::https://vscode-update.azurewebsites.net/${pkgver}/linux-x64/stable
