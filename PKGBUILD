@@ -7,7 +7,7 @@ url="https://code.visualstudio.com/"
 license=('MIT')
 depends=('gtk3' 'alsa-lib' 'libnotify' 'nss' 'libxtst' 'libxss' 'cairo' 'fontconfig' 'gcc-libs'
          'libnotify' 'glibc')
-optdepends=('libdbusmenu-glib')
+optdepends=('libdbusmenu-glib: to enable global menu (install via kcp)')
 source=(vscode_${pkgver}_x86_64.tar.gz::https://vscode-update.azurewebsites.net/${pkgver}/linux-x64/stable
         "${pkgname}.desktop")
 md5sums=('0670442c2e192189cefe89d1e88759e8'
