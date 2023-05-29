@@ -1,5 +1,5 @@
 pkgname=vscode
-pkgver=1.77.3
+pkgver=1.78.2
 pkgrel=1
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
