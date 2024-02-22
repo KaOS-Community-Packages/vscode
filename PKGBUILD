@@ -1,5 +1,5 @@
 pkgname=vscode
-pkgver=1.85.2
+pkgver=1.86.2
 pkgrel=1
 pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
 arch=('x86_64')
@@ -10,7 +10,7 @@ depends=('gtk3' 'alsa-lib' 'libnotify' 'nss' 'libxtst' 'libxss' 'cairo' 'fontcon
 optdepends=('libdbusmenu-glib: to enable global menu (install via kcp)')
 source=(vscode_${pkgver}_x86_64.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-x64/stable
         "${pkgname}.desktop")
-md5sums=('d5043e3889c6897e878edc0ab297f728'
+md5sums=('71cb80813d8ef4a021ed87355d8b2809'
          '20439bbbd1cb5fa5c8d9cb24a05f3b08')
 
 package() {
@@ -29,4 +29,3 @@ package() {
 
     rm -rf ${pkgdir}/opt/vscode/resources/app/{LICENSE*,licenses}
 }
-
