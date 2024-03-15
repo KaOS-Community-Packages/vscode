@@ -9,7 +9,8 @@ depends=('gtk3' 'alsa-lib' 'libnotify' 'nss' 'libxtst' 'libxss' 'cairo' 'fontcon
          'libnotify' 'glibc')
 optdepends=('libdbusmenu-glib: to enable global menu (install via kcp)')
 source=(vscode_${pkgver}_x86_64.tar.gz::https://update.code.visualstudio.com/${pkgver}/linux-x64/stable
-        "${pkgname}.desktop")
+        "${pkgname}.desktop"
+        "${pkgname}-url-handler.desktop")
 md5sums=('e9499d60c1ed9319be6726eaa4873c7b'
          '20439bbbd1cb5fa5c8d9cb24a05f3b08')
 
@@ -22,6 +23,7 @@ package() {
     cp -r ${srcdir}/VSCode-linux-x64/* ${pkgdir}/opt/vscode
     install -Dm644 ${pkgdir}/opt/vscode/resources/app/{LICENSE*,licenses/LICENSE*} ${pkgdir}/usr/share/licenses/${pkgname}/
     install -Dm644 ${srcdir}/${pkgname}.desktop ${pkgdir}/usr/share/applications/${pkgname}.desktop
+    install -Dm644 ${srcdir}/${pkgname}-url-handler.desktop ${pkgdir}/usr/share/applications/${pkgname}-url-handler.desktop
     install -m644 "${srcdir}/VSCode-linux-x64/resources/app/resources/linux/code.png" "${pkgdir}/usr/share/icons/code.png"
     install -dm755 ${pkgdir}/usr/bin
     ln -s /opt/vscode/bin/code ${pkgdir}/usr/bin/${pkgname}
