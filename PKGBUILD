@@ -1,7 +1,7 @@
 pkgname=vscode
 pkgver=1.88.0
 pkgrel=1
-pkgdesc='Microsoft Visual Studio Code is a code editor Open Source'
+pkgdesc='Visual Studio Code by Microsoft'
 arch=('x86_64')
 url="https://code.visualstudio.com/"
 license=('MIT')
