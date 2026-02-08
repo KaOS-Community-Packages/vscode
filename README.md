@@ -1,6 +1,6 @@
 # vscode
 
-Microsoft Visual Studio Code is a code editor Open Source
+Visual Studio Code by Microsoft
 
 [Homepage](https://code.visualstudio.com/)
 
